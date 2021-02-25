@@ -52,8 +52,9 @@ def self.artist_count
       artist_count[artist] += 1
     else #if it's a new artist
       artist_count[artist] = 1
-  end 
+  end
 end
+artist_count
 end
 
 

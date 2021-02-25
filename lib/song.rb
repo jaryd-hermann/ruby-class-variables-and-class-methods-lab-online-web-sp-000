@@ -16,7 +16,7 @@ def initialize(name, artist, genre)
 end
 
 #method to count songs
-def count
+def self.count
  @@count
 end
 

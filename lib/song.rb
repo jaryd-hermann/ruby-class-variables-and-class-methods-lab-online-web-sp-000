@@ -22,12 +22,18 @@ def self.count
 end
 
 #method to return array of unique genres
-def genres
+def self.genres
+  #use uniq method to remove duplicates and return saved array
+  @@genres.uniq!
 end
 
 
-def artists
+def self.artists
+  #use uniq method to remove duplicates and return saved array
+  @@artists.uniq!
 end
 
+def self.genre_count
+end
 
 end

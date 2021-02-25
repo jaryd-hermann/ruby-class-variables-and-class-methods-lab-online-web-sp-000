@@ -1,14 +1,15 @@
 class Song
 attr_accessor :name, :artist, :genre
+ #setting class variables
  @@count = 0
  @@genres = []
  @@artists = []
 
 def initialize(name, artist, genre)
-  #adding to class constant
+  #adding to class variable counter
   @@count += 1
 
-  #giving new instance props
+  #giving new instance's properties
   @name = name
   @artist = artist
   @genre = genre
@@ -27,12 +28,12 @@ def self.genres
   @@genres.uniq!
 end
 
-
+#method to return array of unique artists
 def self.artists
-  #use uniq method to remove duplicates and return saved array
-  @@artists.uniq!
+  @@artists.uniq!   #use uniq method to remove duplicates and return saved array
 end
 
+#method to return genre hash
 def self.genre_count
   genre_count = {}
   @@genres.each do | genre |
@@ -42,9 +43,10 @@ def self.genre_count
       genre_count[genre] = 1
   end
 end
-  genre_count # return array
+  genre_count # return hash
 end
 
+#method to return artist hash
 def self.artist_count
   artist_count = {}
   @@artists.map do | artist |
@@ -54,10 +56,7 @@ def self.artist_count
       artist_count[artist] = 1
   end
 end
-artist_count #return array
+artist_count #return hash
 end
-
-
-
 
 end # end of class

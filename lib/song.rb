@@ -34,9 +34,29 @@ def self.artists
 end
 
 def self.genre_count
+  genre_count = {}
+  @@genres.each do | genre |
+    if genre_count[genre] #if the genre is already in the hash
+      genre_count[genre] += 1
+    else #if it's a new genre
+      genre_count[genre] = 1
+  end
+end
+  genre_count # return array
 end
 
-def self.genre_count
+def self.artist_count
+  artist_count = {}
+  @@artists.map do | artist |
+    if artist_count[artist] #if the artist is already in the hash
+      artist_count[artist] += 1
+    else #if it's a new artist
+      artist_count[artist] = 1
+  end 
+end
 end
 
-end
+
+
+
+end # end of class

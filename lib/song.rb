@@ -13,7 +13,7 @@ end
 
 #method to count songs
 def count
-  @@count
+  return @@count
 end
 
 #method to return array of unique genres

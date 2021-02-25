@@ -6,11 +6,12 @@ attr_accessor :count, :artists, :genres
 
 def initialize(name, artist, genre)
   #adding to class constant
+  @@count += 1
+
   #giving new instance props
   @name = name
   @artist = artist
   @genre = genre
-  @@count += 1
   @@genres << genre
   @@artists << artist
 end

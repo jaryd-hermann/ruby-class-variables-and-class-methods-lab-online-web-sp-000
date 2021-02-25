@@ -15,17 +15,15 @@ end
 
 #method to count songs
 def count
-  return @@count
+ @@count
 end
 
 #method to return array of unique genres
 def genres
-  @@genres = []
 end
 
 
 def artists
-  @@artists = []
 end
 
 
